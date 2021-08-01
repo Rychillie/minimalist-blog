@@ -19,13 +19,21 @@
   height: auto;
 }
 
+.post:hover .image img {
+  opacity: 0.64;
+}
+
 .content {
   flex: 1;
   height: 260px;
-  padding: 24px;
+  padding: 24px 48px 24px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.post:hover .content {
+  padding: 24px 36px 24px 36px;
 }
 
 .content h2 {
