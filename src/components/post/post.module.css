@@ -16,6 +16,17 @@
   object-position: center;
 }
 
+.image > div {
+  object-fit: cover;
+  width: 320px;
+  height: 260px;
+}
+
+.image img {
+  width: auto;
+  height: 260px;
+}
+
 .post:hover .image {
   opacity: 0.64;
 }
@@ -44,4 +55,34 @@
   line-height: 26px;
   font-weight: 500;
   color: #9c9b96;
+}
+
+@media screen and (min-width: 1600px) {
+  .image {
+    width: 400px;
+    height: 320px;
+  }
+
+  .image > div {
+    width: 400px;
+    height: 320px;
+  }
+
+  .image img {
+    height: 320px;
+  }
+
+  .content {
+    height: 320px;
+  }
+
+  .content h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .content p {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }

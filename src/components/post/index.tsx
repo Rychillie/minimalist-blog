@@ -15,8 +15,8 @@ const Post = (): JSX.Element => {
           layout="responsive"
           placeholder="blur"
           quality={100}
-          width={320}
-          height={260}
+          width={400}
+          height={320}
           loading="lazy"
         />
       </div>
