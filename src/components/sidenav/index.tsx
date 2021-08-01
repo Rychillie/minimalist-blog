@@ -8,7 +8,7 @@ const SideNav = (): JSX.Element => {
     <nav className={styles.sideNav}>
       <Link href="/">
         <a className={styles.title}>
-          <h1>Título do website</h1>
+          <h1>💾 website</h1>
         </a>
       </Link>
 

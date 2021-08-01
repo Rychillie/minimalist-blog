@@ -1,6 +1,6 @@
 .post {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex: 1;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .image {
-  width: 320px;
+  width: 100%;
   height: 260px;
   object-fit: cover;
   overflow: hidden;
@@ -18,13 +18,13 @@
 
 .image > div {
   object-fit: cover;
-  width: 320px;
-  height: 260px;
+  width: 100%;
+  height: auto;
 }
 
 .image img {
-  width: auto;
-  height: 260px;
+  width: 100%;
+  height: auto;
 }
 
 .post:hover .image {
@@ -48,6 +48,7 @@
   font-size: 32px;
   line-height: 40px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .content p {
@@ -55,6 +56,101 @@
   line-height: 26px;
   font-weight: 500;
   color: #9c9b96;
+}
+
+@media screen and (min-width: 720px) {
+  .post {
+    flex-direction: row;
+  }
+
+  .image {
+    width: 320px;
+    height: 260px;
+  }
+
+  .image > div {
+    width: 320px;
+    height: 260px;
+  }
+
+  .image img {
+    width: auto;
+    height: 260px;
+  }
+
+  .content {
+    height: 260px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .image {
+    width: 320px;
+    height: 260px;
+  }
+
+  .image > div {
+    width: 320px;
+    height: 260px;
+  }
+
+  .image img {
+    height: 260px;
+  }
+
+  .content {
+    height: 260px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .image {
+    width: 400px;
+    height: 320px;
+  }
+
+  .image > div {
+    width: 400px;
+    height: 320px;
+  }
+
+  .image img {
+    height: 320px;
+  }
+
+  .content {
+    height: 320px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .content p {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
