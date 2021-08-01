@@ -4,6 +4,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #ece9e4;
   background: #111;
+  font-smooth: antialiased;
 }
 
 a {
