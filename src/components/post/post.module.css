@@ -1,0 +1,42 @@
+.post {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.image {
+  width: 320px;
+  height: 260px;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center;
+}
+
+.image img {
+  min-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  height: 260px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content h2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #9c9b96;
+}
