@@ -1,0 +1,28 @@
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 56px;
+  height: 100%;
+  background-color: #161616;
+}
+
+.title h1 {
+  font-size: 48px;
+  line-height: 1;
+  font-size: 900;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 8px 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
