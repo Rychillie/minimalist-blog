@@ -12,14 +12,7 @@
   object-position: center;
 }
 
-.image img {
-  min-width: 100%;
-  width: auto;
-  max-height: 100%;
-  height: auto;
-}
-
-.post:hover .image img {
+.post:hover .image {
   opacity: 0.64;
 }
 

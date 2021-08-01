@@ -1,14 +1,23 @@
 import React from "react";
+import Image from "next/image";
 
 import styles from "./post.module.css";
+
+import bg from "../../../public/assets/blog-images/altumcode-dMUt0X3f59Q-unsplash.jpg";
 
 const Post = (): JSX.Element => {
   return (
     <div className={styles.post}>
       <div className={styles.image}>
-        <img
-          src="/assets/blog-images/altumcode-dMUt0X3f59Q-unsplash.jpg"
+        <Image
+          src={bg}
           alt="só nos computer filhão"
+          layout="responsive"
+          placeholder="blur"
+          quality={100}
+          width={320}
+          height={260}
+          loading="lazy"
         />
       </div>
 
