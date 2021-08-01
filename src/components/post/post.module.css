@@ -4,6 +4,10 @@
   flex: 1;
 }
 
+.post:hover {
+  cursor: pointer;
+}
+
 .image {
   width: 320px;
   height: 260px;
