@@ -5,6 +5,7 @@ body {
   color: #ece9e4;
   background: #111;
   font-smooth: antialiased;
+  z-index: 0;
 }
 
 a {

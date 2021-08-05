@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "./sidenav.module.css";
+import styles from "./nav.module.css";
 
-const SideNav = (): JSX.Element => {
+const Nav = (): JSX.Element => {
   return (
-    <nav className={styles.sideNav}>
+    <nav className={styles.nav}>
       <Link href="/">
         <a className={styles.title}>
           <h1>💾 website</h1>
@@ -28,4 +28,4 @@ const SideNav = (): JSX.Element => {
   );
 };
 
-export default SideNav;
+export default Nav;

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-import SideNav from "../components/sidenav";
+import SideNav from "../components/nav";
 import Post from "../components/post";
 
 export default function Home() {
