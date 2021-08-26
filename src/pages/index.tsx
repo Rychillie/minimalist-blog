@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import { getAllPosts } from "./api/posts";
 
@@ -7,15 +6,20 @@ import styles from "../styles/Home.module.css";
 
 import SideNav from "../components/nav";
 import Post from "../components/post";
+import thumbnail from "./api/thumbnail";
 
 interface HomeProps {
   posts: Array<{
     slug: string;
     title: string;
+    description: string;
+    thumbnailUrl: string;
   }>;
 }
 
 export default function Home(props: HomeProps) {
+  console.log(props.posts);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +32,13 @@ export default function Home(props: HomeProps) {
       </header>
       <main className={styles.main}>
         {props.posts.map((post, idx) => (
-          <Post key={idx} postLink={post.slug} title={post.title} />
+          <Post
+            key={idx}
+            postLink={post.slug}
+            title={post.title}
+            description={post.description}
+            thumbnailUrl={post.thumbnailUrl}
+          />
         ))}
       </main>
     </div>

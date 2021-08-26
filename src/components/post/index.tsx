@@ -7,19 +7,23 @@ import styles from "./post.module.css";
 import bg from "../../../public/assets/blog-images/altumcode-dMUt0X3f59Q-unsplash.jpg";
 
 interface LinkProps {
+  description: string;
+  thumbnailUrl: string;
   postLink: string;
   title: string;
 }
+
 const Post = (props: LinkProps): JSX.Element => {
+  console.log(props.thumbnailUrl);
+
   return (
     <Link href={props.postLink}>
       <a className={styles.post}>
         <div className={styles.image}>
           <Image
-            src={bg}
-            alt="só nos computer filhão"
+            src={props.thumbnailUrl}
+            alt={props.title}
             layout="responsive"
-            placeholder="blur"
             quality={100}
             width={400}
             height={320}
@@ -29,10 +33,7 @@ const Post = (props: LinkProps): JSX.Element => {
 
         <div className={styles.content}>
           <h2>{props.title}</h2>
-          <p>
-            Texto referente ao conteúdo da publicação do blog em si, ou seja
-            isto é uma breve descrição.
-          </p>
+          <p>{props.description}</p>
         </div>
       </a>
     </Link>

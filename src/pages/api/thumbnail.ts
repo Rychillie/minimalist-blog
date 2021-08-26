@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { NextApiRequest, NextApiResponse } from "next";
-import { getScreenshot } from "./_lib/chromium";
-import { getHtml } from "./_lib/thumbnailTemplate";
+import { getScreenshot } from "./lib/chromium";
+import { getHtml } from "./lib/thumbnailTemplate";
 
 const isDev = !process.env.AWS_REGION;
 const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";
