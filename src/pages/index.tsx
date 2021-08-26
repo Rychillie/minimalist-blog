@@ -1,11 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
+
+import { getAllPosts } from "./api/posts";
+
 import styles from "../styles/Home.module.css";
 
 import SideNav from "../components/nav";
 import Post from "../components/post";
 
-export default function Home() {
+interface HomeProps {
+  posts: Array<{
+    slug: string;
+    title: string;
+  }>;
+}
+
+export default function Home(props: HomeProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,15 +27,20 @@ export default function Home() {
         <SideNav />
       </header>
       <main className={styles.main}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {props.posts.map((post, idx) => (
+          <Post key={idx} postLink={post.slug} title={post.title} />
+        ))}
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allPosts = await getAllPosts();
+
+  return {
+    props: {
+      posts: allPosts,
+    },
+  };
 }
