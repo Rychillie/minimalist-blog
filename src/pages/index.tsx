@@ -18,8 +18,6 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  console.log(props.posts);
-
   return (
     <div className={styles.container}>
       <Head>

@@ -14,16 +14,16 @@ interface LinkProps {
 }
 
 const Post = (props: LinkProps): JSX.Element => {
-  console.log(props.thumbnailUrl);
-
   return (
     <Link href={props.postLink}>
       <a className={styles.post}>
         <div className={styles.image}>
           <Image
             src={props.thumbnailUrl}
+            blurDataURL={props.thumbnailUrl}
             alt={props.title}
             layout="responsive"
+            placeholder="blur"
             quality={100}
             width={400}
             height={320}
