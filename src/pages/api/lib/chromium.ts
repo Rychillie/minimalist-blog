@@ -28,5 +28,5 @@ export async function getScreenshot(
 
   const file = await page.screenshot({ type: "png" });
 
-  return file;
+  return file as Buffer;
 }

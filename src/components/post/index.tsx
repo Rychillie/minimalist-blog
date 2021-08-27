@@ -17,7 +17,17 @@ const Post = (props: LinkProps): JSX.Element => {
     <Link href={props.postLink}>
       <a className={styles.post}>
         <div className={styles.image}>
-          <img src={props.thumbnailUrl} alt={props.title} loading="lazy" />
+          <Image
+            src={props.thumbnailUrl}
+            blurDataURL={props.thumbnailUrl}
+            alt={props.title}
+            layout="responsive"
+            placeholder="blur"
+            quality={100}
+            width={400}
+            height={320}
+            loading="lazy"
+          />
         </div>
 
         <div className={styles.content}>
