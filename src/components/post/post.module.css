@@ -14,6 +14,7 @@
   object-fit: cover;
   overflow: hidden;
   object-position: center;
+  position: relative;
 }
 
 .image > div {
@@ -25,6 +26,10 @@
 .image img {
   width: 100%;
   height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .post:hover .image {
